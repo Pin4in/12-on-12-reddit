@@ -23,3 +23,5 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 accounts-password
 accounts-ui
 meteortoys:allthings
+iron:router
+sacha:spin

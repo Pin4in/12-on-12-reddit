@@ -1,0 +1,10 @@
+<template name="postItem">
+
+  <li class="mdl-list__item">
+      <div class="mdl-list__item-primary-content">
+        <a class="post-link" href="{{url}}" target="_blank">{{title}}</a>
+        <span class="post-domain">{{domain}}</span>
+      </div>
+      <a class="mdl-list__item-secondary-action" href="{{pathFor 'postPage'}}">Discuss</a>
+  </li>
+</template>
