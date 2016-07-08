@@ -5,6 +5,10 @@
         <a class="post-link" href="{{url}}" target="_blank">{{title}}</a>
         <span class="post-domain">{{domain}}</span>
       </div>
-      <a class="mdl-list__item-secondary-action" href="{{pathFor 'postPage'}}">Discuss</a>
+      <p>
+        submitted by {{author}}
+        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+      </p>
+      <a class="btn btn-primary" href="{{pathFor 'postPage'}}">Discuss</a>
   </li>
 </template>

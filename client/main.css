@@ -1,1 +1,6 @@
 /* CSS declarations go here */
+
+.form-container {
+  margin: auto;
+  max-width: 600px;
+}
