@@ -1,14 +1,22 @@
 <template name="postItem">
 
-  <li class="mdl-list__item">
-      <div class="mdl-list__item-primary-content">
+  <li class="list-group-item post">
+    <div class="post__votes">
+
+    </div>
+    <div class="post__content">
+      <p class="lead">
         <a class="post-link" href="{{url}}" target="_blank">{{title}}</a>
-        <span class="post-domain">{{domain}}</span>
-      </div>
-      <p>
+        <span class="m-l-1">{{domain}}</span>
+      </p>
+      <p class="text-muted">
         submitted by {{author}}
         {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
       </p>
-      <a class="btn btn-primary" href="{{pathFor 'postPage'}}">Discuss</a>
+      <p class="text-muted">
+        # comments
+      </p>
+    </div>
+    <a class="btn btn-primary post__action" href="{{pathFor 'postPage'}}">Discuss</a>
   </li>
 </template>

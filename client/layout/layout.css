@@ -4,13 +4,7 @@
     padding: 0 15px;
 }
 
-.navbar {
-    display: flex;
-    
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 10px;
-
-    background: #e3df84;
+#login-buttons {
+  line-height: 20px;
+  padding: 15px;
 }
