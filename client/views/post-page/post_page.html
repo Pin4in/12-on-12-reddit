@@ -1,3 +1,52 @@
 <template name="postPage">
-  {{> postItem}}
+  <div class="post post-single">
+    <div class="post__votes">
+      <div class="upvote">
+      </div>
+      <div class="votes">
+        10
+      </div>
+      <div class="downvote">
+      </div>
+    </div>
+    <div class="post__content">
+      <p class="lead">
+        <a class="post-link" href="{{url}}" target="_blank">{{title}}</a>
+        <span class="m-l-1">{{domain}}</span>
+      </p>
+      <p class="text-muted">
+        submitted by {{author}}
+        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
+        <span>12 comments</span>
+      </p>
+    </div>
+  </div>
+  <div class="comments-wrapper">
+    <h4>Комментарии (12)</h4>
+    <div class="comment">
+      <p class="comment-meta text-muted">
+        <span>
+          John Oliver
+        </span>
+        <span>
+          12.07.16
+        </span>
+      </p>
+      <p class="comment-body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea tenetur qui eligendi animi maxime officiis earum molestias facilis rem ex ipsam debitis incidunt facere temporibus quaerat, quis repellat illo provident.
+      </p>
+    </div>
+    <hr>
+    <div class="add-comment">
+      <h4>Leave a comment</h4>
+      <form>
+        <div class="form-group">
+          <textarea class="form-control" id="new-comment-text" rows="3"></textarea>
+        </div>
+        <div class="form-group clearfix">
+            <button type="submit" class="pull-right btn btn-default">Send</button>
+          </div>
+      </form>
+    </div>
+  </div>
 </template>

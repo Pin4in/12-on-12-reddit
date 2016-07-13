@@ -2,7 +2,13 @@
 
   <li class="list-group-item post">
     <div class="post__votes">
-
+      <div class="upvote">
+      </div>
+      <div class="votes">
+        10
+      </div>
+      <div class="downvote">
+      </div>
     </div>
     <div class="post__content">
       <p class="lead">
@@ -11,10 +17,10 @@
       </p>
       <p class="text-muted">
         submitted by {{author}}
-        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
-      </p>
-      <p class="text-muted">
-        # comments
+        {{#if ownPost}}
+          <a href="{{pathFor 'postEdit'}}">Edit</a>
+        {{/if}}
+        <a class="post-comments" href="{{pathFor 'postPage'}}">12 comments</a>
       </p>
     </div>
     <a class="btn btn-primary post__action" href="{{pathFor 'postPage'}}">Discuss</a>

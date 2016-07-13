@@ -9,14 +9,14 @@
               <li>
                 <a href="{{pathFor 'postSubmit'}}">Add Post</a>
               </li>
-              <li>
-                {{> loginButtons align="right"}}
-              </li>
             </ul>
+            <div class="pull-right">
+              {{> loginButtons align="right"}}
+            </div>
           </nav>
 
         </header>
-
+        {{> errors}}
         <div class="main">
             {{> yield}}
         </div>

@@ -1,0 +1,25 @@
+.post-single {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+
+
+.comments-wrapper {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.comments-wrapper h4 {
+  margin-bottom: 20px;
+}
+
+.comment {
+  margin-bottom: 20px;
+}
+
+.comment-meta {
+  font-size: .9em;
+}
