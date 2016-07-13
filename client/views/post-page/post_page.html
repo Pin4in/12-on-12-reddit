@@ -17,27 +17,24 @@
       <p class="text-muted">
         submitted by {{author}}
         {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
-        <span>12 comments</span>
       </p>
     </div>
   </div>
   <div class="comments-wrapper">
-    <h4>Комментарии ({{commentsCount}})</h4>
-    {{#each comments}}
-      {{> comment}}
-    {{/each}}
+    {{#if commentsCount}}
+      <h4>Comments ({{commentsCount}})</h4>
+      {{#each comments}}
+        {{> comment}}
+      {{/each}}
+      <hr>
+    {{/if}}
 
-    <hr>
-    <div class="add-comment">
-      <h4>Leave a comment</h4>
-      <form>
-        <div class="form-group">
-          <textarea class="form-control" id="new-comment-text" rows="3"></textarea>
-        </div>
-        <div class="form-group clearfix">
-            <button type="submit" class="pull-right btn btn-default">Send</button>
-          </div>
-      </form>
-    </div>
+
+    {{#if currentUser}}
+      {{> commentSubmit}}
+    {{else}}
+      <p>Please log in to leave a comment.</p>
+    {{/if}}
+
   </div>
 </template>

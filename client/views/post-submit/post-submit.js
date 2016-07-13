@@ -9,14 +9,13 @@ Template.postSubmit.events({
 
     Meteor.call('postInsert', post, function(error, result) {
 
-      if (error)
+      if (error) {
         // показываем ошибку пользователю
         return throwError(error.reason);
+      }
 
       if (result.postExists)
         throwError('This link has already been posted');
-
-      Router.go('postPage', {_id: id});
-    });
+      Router.go('postPage', {_id: result._id});});
   }
 });
