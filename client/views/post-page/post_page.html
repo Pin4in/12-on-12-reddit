@@ -22,20 +22,11 @@
     </div>
   </div>
   <div class="comments-wrapper">
-    <h4>Комментарии (12)</h4>
-    <div class="comment">
-      <p class="comment-meta text-muted">
-        <span>
-          John Oliver
-        </span>
-        <span>
-          12.07.16
-        </span>
-      </p>
-      <p class="comment-body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea tenetur qui eligendi animi maxime officiis earum molestias facilis rem ex ipsam debitis incidunt facere temporibus quaerat, quis repellat illo provident.
-      </p>
-    </div>
+    <h4>Комментарии ({{commentsCount}})</h4>
+    {{#each comments}}
+      {{> comment}}
+    {{/each}}
+
     <hr>
     <div class="add-comment">
       <h4>Leave a comment</h4>

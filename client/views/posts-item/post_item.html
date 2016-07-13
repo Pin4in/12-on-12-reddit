@@ -20,7 +20,7 @@
         {{#if ownPost}}
           <a href="{{pathFor 'postEdit'}}">Edit</a>
         {{/if}}
-        <a class="post-comments" href="{{pathFor 'postPage'}}">12 comments</a>
+        {{#if commentsCount}}<a class="post-comments" href="{{pathFor 'postPage'}}">{{commentsCount}} comments</a> {{/if}}
       </p>
     </div>
     <a class="btn btn-primary post__action" href="{{pathFor 'postPage'}}">Discuss</a>
